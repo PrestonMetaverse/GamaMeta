@@ -612,7 +612,7 @@ contract GAMA is Context, IERC20, Ownable {
     mapping(address => mapping(address => uint256)) internal _allowances;
 
     uint256 private constant MAX = ~uint256(0);
-    uint256 internal _tokenTotal = 1000000000e9; //1 billion total supply
+    uint256 internal _tokenTotal = 1000000000e18; //1 billion total supply
     uint256 internal _reflectionTotal = (MAX - (MAX % _tokenTotal));
 
     mapping(address => bool) isTaxless;
@@ -644,8 +644,8 @@ contract GAMA is Context, IERC20, Ownable {
     bool private inSwapAndLiquify;
     bool public swapAndLiquifyEnabled = true;
     
-    uint256 public maxTxAmount = 250000000e9; // no limit
-    uint256 public minTokensBeforeSwap = 1_000_000e9;
+    uint256 public maxTxAmount = 250000000e18; // no limit
+    uint256 public minTokensBeforeSwap = 1_000_000e18;
   
     IUniswapV2Router02 public  uniswapV2Router;
     address public  uniswapV2Pair;
@@ -1074,4 +1074,3 @@ contract GAMA is Context, IERC20, Ownable {
 
     receive() external payable {}
 }
-
