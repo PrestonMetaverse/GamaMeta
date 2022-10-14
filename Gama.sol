@@ -1051,26 +1051,10 @@ contract GAMA is Context, IERC20, Ownable {
     }
     
     
-    function setBuyLiquidityFee(uint256 fee) external onlyOwner {
-        _buyLiquidityFee = fee;
-    }
-
-    function setSellLiquidityFee(uint256 fee) external onlyOwner {
-        _sellLiquidityFee = fee;
-    }
-
-    function setBuyMarketingFee(uint256 fee) external onlyOwner {
-        buymarketingFee = fee;
-    }
-
-    function setSellMarketingFee(uint256 fee) external onlyOwner {
-        sellMarketingFee = fee;
-    }
- 
-    
     function setMinTokensBeforeSwap(uint256 amount) external onlyOwner {
         minTokensBeforeSwap = amount;
     }
 
     receive() external payable {}
 }
+
